@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.barros9.beerappkmm.android.mainfragment.MainFragment">
+        <action
+            android:id="@+id/action_mainFragment_to_itemListDialogFragment"
+            app:destination="@id/itemListDialogFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/itemListDialogFragment"
+        android:name="com.barros9.beerappkmm.android.detailfragment.DetailFragment">
+        <argument
+            android:name="imageUrl"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="tagline"
+            app:argType="string" />
+        <argument
+            android:name="description"
+            app:argType="string" />
+    </dialog>
+</navigation>
